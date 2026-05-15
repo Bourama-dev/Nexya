@@ -890,8 +890,8 @@ footer{
 @media(max-width:768px){
   /* Nav */
   nav{top:10px;width:calc(100% - 20px);padding:10px 16px;}
-  .nav-links a:not(.nav-cta){display:none;}
-  .nav-links{gap:12px;}
+  .nav-links a:not(.nav-cta):not(.nav-login){display:none;}
+  .nav-links{gap:10px;}
 
   /* Hero */
   .hero{padding:100px 20px 56px;text-align:center;}
@@ -991,7 +991,8 @@ footer{
 @media(max-width:480px){
   /* Nav : logo + CTA only */
   nav{padding:10px 14px;}
-  .nav-links a:not(.nav-cta){display:none;}
+  .nav-links a:not(.nav-cta):not(.nav-login){display:none;}
+  .nav-login{padding:7px 12px;font-size:12px!important;}
   .nav-cta{padding:7px 14px;font-size:12px!important;}
 
   /* Hero */
