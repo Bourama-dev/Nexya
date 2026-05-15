@@ -124,6 +124,15 @@ nav.light-nav .nav-links a:hover{color:var(--text-light);}
   box-shadow:0 0 20px rgba(108,92,231,0.35);
 }
 .nav-cta:hover{background:var(--vl)!important;transform:translateY(-1px);}
+.nav-login{
+  border:1px solid rgba(255,255,255,0.18);
+  color:rgba(255,255,255,0.65)!important;
+  padding:9px 18px;border-radius:9px;
+  font-weight:500!important;font-size:13px!important;
+  transition:all 0.2s!important;
+}
+.nav-login:hover{border-color:var(--vl);color:var(--vl)!important;}
+nav.light-nav .nav-login{border-color:rgba(108,92,231,0.3);color:var(--v)!important;}
 
 /* ─── HERO ─── */
 .hero{
@@ -1049,6 +1058,7 @@ footer{
     <a href="#probleme">Problème</a>
     <a href="#solution">Solution</a>
     <a href="#process">Process</a>
+    <a href="login.html" class="nav-login">Connexion</a>
     <a href="https://calendly.com/bouramad900/30min" target="_blank" rel="noopener" class="nav-cta" onclick="Calendly.initPopupWidget({url:'https://calendly.com/bouramad900/30min'});return false;">Prendre RDV</a>
   </div>
 </nav>
