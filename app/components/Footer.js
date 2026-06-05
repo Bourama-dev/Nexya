@@ -18,7 +18,8 @@ export default function Footer() {
           <a href="#roi">Calculer mon ROI</a>
           <a href="#faq">FAQ</a>
           <a href="#testimonials">Cas clients</a>
-          <a href="tel:0766125841">Support : 07 66 12 58 41</a>
+          <a href="tel:0766125841">☎️ 07 66 12 58 41</a>
+          <a href="mailto:bouramad900@gmail.com">📧 Nous écrire</a>
         </div>
 
         <div className="footer-col">
@@ -34,7 +35,7 @@ export default function Footer() {
           <a href="https://linkedin.com">LinkedIn</a>
           <a href="https://instagram.com">Instagram</a>
           <a href="https://facebook.com">Facebook</a>
-          <a href="mailto:contact@nexya.fr">contact@nexya.fr</a>
+          <a href="mailto:bouramad900@gmail.com">bouramad900@gmail.com</a>
         </div>
       </div>
 
