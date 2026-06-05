@@ -20,24 +20,39 @@ import Footer from './components/Footer'
 
 export default function Home() {
   useScrollAnimation()
+  const [calendlyLoaded, setCalendlyLoaded] = useState(false)
 
   useEffect(() => {
+    // Load Calendly script
     const script = document.createElement('script')
     script.src = 'https://assets.calendly.com/assets/external/widget.js'
     script.async = true
     script.onload = () => {
-      window.Calendly?.initPopupWidget({
-        url: 'https://calendly.com/bouramad900/30min'
-      })
+      setTimeout(() => {
+        if (window.Calendly) {
+          window.Calendly.initPopupWidget({
+            url: 'https://calendly.com/bouramad900/30min',
+            prefilled: {}
+          })
+          setCalendlyLoaded(true)
+        }
+      }, 500)
     }
     document.head.appendChild(script)
+
+    return () => {
+      if (document.head.contains(script)) {
+        document.head.removeChild(script)
+      }
+    }
   }, [])
 
   const handleCTAClick = () => {
-    if (window.Calendly) {
+    if (window.Calendly?.showPopupWidget) {
       window.Calendly.showPopupWidget()
     } else {
-      window.open('https://calendly.com/bouramad900/30min', '_blank')
+      // Fallback: open Calendly directly
+      window.open('https://calendly.com/bouramad900/30min?background_color=07070f&text_color=ffffff', '_blank')
     }
   }
 

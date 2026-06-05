@@ -36,9 +36,10 @@ const testimonials = [
 export default function Testimonials() {
   return (
     <section id="testimonials" className="testimonials sec-dark">
-      <h2 className="section-title rv" style={{animationDelay:'0.1s'}}>Ils ont fermé plus de chantiers</h2>
+      <div className="testimonials-container">
+        <h2 className="section-title rv" style={{animationDelay:'0.1s'}}>Ils ont fermé plus de chantiers</h2>
 
-      <div className="testimonials-grid">
+        <div className="testimonials-grid">
         {testimonials.map((t, idx) => (
           <div key={t.id} className="testimonial-card rv" data-d={idx + 1} style={{animationDelay:`${0.1 + idx * 0.1}s`}}>
             <div className="testimonial-rating">
@@ -59,6 +60,7 @@ export default function Testimonials() {
             </div>
           </div>
         ))}
+        </div>
       </div>
     </section>
   )
