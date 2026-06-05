@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { useScrollAnimation } from './hooks/useScrollAnimation'
 import Navigation from './components/Navigation'
 import Hero from './components/Hero'
 import Stats from './components/Stats'
@@ -18,14 +19,26 @@ import StickyCTA from './components/StickyCTA'
 import Footer from './components/Footer'
 
 export default function Home() {
+  useScrollAnimation()
+
   useEffect(() => {
-    window.Calendly?.initPopupWidget({
-      url: 'https://calendly.com/bouramad900/30min'
-    })
+    const script = document.createElement('script')
+    script.src = 'https://assets.calendly.com/assets/external/widget.js'
+    script.async = true
+    script.onload = () => {
+      window.Calendly?.initPopupWidget({
+        url: 'https://calendly.com/bouramad900/30min'
+      })
+    }
+    document.head.appendChild(script)
   }, [])
 
   const handleCTAClick = () => {
-    window.Calendly?.showPopupWidget()
+    if (window.Calendly) {
+      window.Calendly.showPopupWidget()
+    } else {
+      window.open('https://calendly.com/bouramad900/30min', '_blank')
+    }
   }
 
   return (
