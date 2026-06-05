@@ -24,10 +24,12 @@ export default function Home() {
   const [showCalendly, setShowCalendly] = useState(false)
 
   const handleCTAClick = () => {
+    console.log('CTA clicked, opening Calendly modal')
     setShowCalendly(true)
   }
 
   const handleCloseCalendly = () => {
+    console.log('Calendly modal closed')
     setShowCalendly(false)
   }
 
