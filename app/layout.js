@@ -3,6 +3,8 @@ import './globals.css'
 export const metadata = {
   title: 'Nexya — Zéro appel manqué',
   description: 'Automatisation complète pour artisans BTP. Gagnez du temps, fermez plus de chantiers.',
+  viewport: 'width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes',
+  themeColor: '#6C5CE7',
 }
 
 export default function RootLayout({ children }) {
