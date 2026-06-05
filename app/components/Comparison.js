@@ -15,7 +15,7 @@ export default function Comparison() {
     <section className="table-sec">
       <div className="table-inner">
         <div className="lbl on-light centered">Vs. la concurrence</div>
-        <h2 className="sec-title">Nexya > tout le reste</h2>
+        <h2 className="sec-title">Nexya {'>'}  tout le reste</h2>
         <p className="sec-sub light">Pas de répondeur basique. Pas d'app compliquée. Juste Nexya.</p>
 
         <table className="comp-table">
