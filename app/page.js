@@ -12,7 +12,7 @@ import Footer from './components/Footer'
 export default function Home() {
   useEffect(() => {
     window.Calendly?.initPopupWidget({
-      url: 'https://calendly.com/nexya-rdv/diagnostic?hide_event_type_details=1&hide_gdpr_consent=1'
+      url: 'https://calendly.com/bouramad900/30min'
     })
   }, [])
 
