@@ -5,8 +5,8 @@ import { useState } from 'react'
 const faqItems = [
   {
     id: 1,
-    question: 'C\'est trop cher pour mon entreprise',
-    answer: 'Nexya coûte entre 99€ et 299€/mois selon votre volume d\'appels. Mais vous en récupérez 3-5x le coût en chantiers supplémentaires. Un artisan qui gagne 12 chantiers bonus = +96k€ de CA. Voir calcul au-dessus. Première consultation gratuite pour calibrer votre besoin.'
+    question: 'Quel est le coût de Nexya ?',
+    answer: 'Les tarifs sont adaptés à votre volume d\'appels et votre secteur. Vous en récupérez 3-5x le coût en chantiers supplémentaires. Un artisan qui gagne 12 chantiers bonus = +96k€ de CA. Demandez notre diagnostic gratuit pour un devis sur mesure.'
   },
   {
     id: 2,

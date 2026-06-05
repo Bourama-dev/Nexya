@@ -28,7 +28,7 @@ export default function Navigation({ onCTAClick }) {
         <a href="#testimonials">Témoignages</a>
         <a href="#roi">ROI</a>
         <a href="#faq">FAQ</a>
-        <a href="tel:+33147957394" className="nav-phone">+33 1 47 95 73 94</a>
+        <a href="tel:0766125841" className="nav-phone">07 66 12 58 41</a>
       </div>
 
       <button className="nav-cta" onClick={onCTAClick}>

@@ -18,7 +18,7 @@ export default function Footer() {
           <a href="#roi">Calculer mon ROI</a>
           <a href="#faq">FAQ</a>
           <a href="#testimonials">Cas clients</a>
-          <a href="tel:+33147957394">Support : +33 1 47 95 73 94</a>
+          <a href="tel:0766125841">Support : 07 66 12 58 41</a>
         </div>
 
         <div className="footer-col">
