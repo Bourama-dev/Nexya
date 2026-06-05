@@ -17,20 +17,14 @@ import CTASection from './components/CTASection'
 import Founder from './components/Founder'
 import StickyCTA from './components/StickyCTA'
 import Footer from './components/Footer'
-import CalendlyModal from './components/CalendlyModal'
-
 export default function Home() {
   useScrollAnimation()
-  const [showCalendly, setShowCalendly] = useState(false)
 
   const handleCTAClick = () => {
-    console.log('CTA clicked, opening Calendly modal')
-    setShowCalendly(true)
-  }
-
-  const handleCloseCalendly = () => {
-    console.log('Calendly modal closed')
-    setShowCalendly(false)
+    console.log('Opening Calendly...')
+    // Open Calendly in a new window
+    const url = 'https://calendly.com/bouramad900/30min'
+    window.open(url, '_blank', 'noopener,noreferrer')
   }
 
   return (
@@ -50,7 +44,6 @@ export default function Home() {
       <Founder />
       <StickyCTA onCTAClick={handleCTAClick} />
       <Footer />
-      <CalendlyModal isOpen={showCalendly} onClose={handleCloseCalendly} />
     </main>
   )
 }
