@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { useScrollAnimation } from './hooks/useScrollAnimation'
 import Navigation from './components/Navigation'
 import Hero from './components/Hero'
@@ -17,43 +17,18 @@ import CTASection from './components/CTASection'
 import Founder from './components/Founder'
 import StickyCTA from './components/StickyCTA'
 import Footer from './components/Footer'
+import CalendlyModal from './components/CalendlyModal'
 
 export default function Home() {
   useScrollAnimation()
-  const [calendlyLoaded, setCalendlyLoaded] = useState(false)
-
-  useEffect(() => {
-    // Load Calendly script
-    const script = document.createElement('script')
-    script.src = 'https://assets.calendly.com/assets/external/widget.js'
-    script.async = true
-    script.onload = () => {
-      setTimeout(() => {
-        if (window.Calendly) {
-          window.Calendly.initPopupWidget({
-            url: 'https://calendly.com/bouramad900/30min',
-            prefilled: {}
-          })
-          setCalendlyLoaded(true)
-        }
-      }, 500)
-    }
-    document.head.appendChild(script)
-
-    return () => {
-      if (document.head.contains(script)) {
-        document.head.removeChild(script)
-      }
-    }
-  }, [])
+  const [showCalendly, setShowCalendly] = useState(false)
 
   const handleCTAClick = () => {
-    if (window.Calendly?.showPopupWidget) {
-      window.Calendly.showPopupWidget()
-    } else {
-      // Fallback: open Calendly directly
-      window.open('https://calendly.com/bouramad900/30min?background_color=07070f&text_color=ffffff', '_blank')
-    }
+    setShowCalendly(true)
+  }
+
+  const handleCloseCalendly = () => {
+    setShowCalendly(false)
   }
 
   return (
@@ -73,6 +48,7 @@ export default function Home() {
       <Founder />
       <StickyCTA onCTAClick={handleCTAClick} />
       <Footer />
+      <CalendlyModal isOpen={showCalendly} onClose={handleCloseCalendly} />
     </main>
   )
 }
