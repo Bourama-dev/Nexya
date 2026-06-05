@@ -8,10 +8,16 @@ export default function ROICalculator() {
 
   const conversionRate = 0.45
   const automationGain = 0.35
+  const missedCallRate = 0.15 // 15% des appels sont manqués
 
-  const missedCalls = Math.floor(callsPerWeek * 0.15)
-  const missedDeals = Math.floor(missedCalls * conversionRate)
-  const yearlyLoss = missedDeals * 52 * avgProjectValue
+  // Calcul réaliste:
+  // 1. Appels reçus par semaine
+  // 2. Appels manqués (15%)
+  // 3. Chantiers perdus = appels manqués * taux de conversion
+  const callsMissedPerWeek = callsPerWeek * missedCallRate
+  const dealsLostPerWeek = callsMissedPerWeek * conversionRate
+  const dealsLostPerYear = dealsLostPerWeek * 52
+  const yearlyLoss = dealsLostPerYear * avgProjectValue
   const monthlyLoss = Math.floor(yearlyLoss / 12)
 
   return (
@@ -58,7 +64,7 @@ export default function ROICalculator() {
               {monthlyLoss.toLocaleString('fr-FR')} €
             </div>
             <div style={{ marginTop: '16px', padding: '12px', background: 'rgba(108,92,231,0.1)', borderRadius: '8px', fontSize: '12px', color: 'rgba(255,255,255,0.7)', lineHeight: '1.6' }}>
-              <strong style={{color: 'var(--vl)'}}>{Math.ceil(callsPerWeek * 0.15)}</strong> appels manqués/semaine = <strong style={{color: 'var(--vl)'}}>{missedDeals}</strong> chantiers perdus/semaine = <strong style={{color: 'var(--vl)'}}>{Math.floor(yearlyLoss).toLocaleString('fr-FR')} €</strong> par an
+              <strong style={{color: 'var(--vl)'}}>{callsMissedPerWeek.toFixed(1)}</strong> appels manqués/semaine = <strong style={{color: 'var(--vl)'}}>{dealsLostPerWeek.toFixed(2)}</strong> chantiers perdus/semaine = <strong style={{color: 'var(--vl)'}}>{Math.floor(yearlyLoss).toLocaleString('fr-FR')} €</strong> par an
             </div>
           </div>
 
