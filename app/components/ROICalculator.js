@@ -8,11 +8,12 @@ export default function ROICalculator() {
 
   const conversionRate = 0.45
   const automationGain = 0.35
+  const safeProjectValue = Number.isFinite(avgProjectValue) ? avgProjectValue : 0
 
-  const missedCalls = Math.floor(callsPerWeek * 0.15)
-  const missedDeals = Math.floor(missedCalls * conversionRate)
-  const yearlyLoss = missedDeals * 52 * avgProjectValue
-  const monthlyLoss = Math.floor(yearlyLoss / 12)
+  const missedCallsPerWeek = callsPerWeek * 0.15
+  const missedDealsPerWeek = missedCallsPerWeek * conversionRate
+  const yearlyLoss = missedDealsPerWeek * 52 * safeProjectValue
+  const monthlyLoss = Math.round(yearlyLoss / 12)
 
   return (
     <section id="roi" className="roi-section">
@@ -55,7 +56,7 @@ export default function ROICalculator() {
               max="50000"
               step="500"
               value={avgProjectValue}
-              onChange={(e) => setAvgProjectValue(Number(e.target.value))}
+              onChange={(e) => setAvgProjectValue(e.target.value === '' ? '' : Number(e.target.value))}
             />
           </div>
 
@@ -65,7 +66,7 @@ export default function ROICalculator() {
               {monthlyLoss.toLocaleString('fr-FR')} €
             </div>
             <div style={{ marginTop: '16px', padding: '12px', background: 'rgba(61,90,254,0.1)', borderRadius: '8px', fontSize: '12px', color: 'rgba(255,255,255,0.7)', lineHeight: '1.5' }}>
-              <strong>{callsPerWeek * 0.15}</strong> appels manqués/semaine = <strong>{missedDeals}</strong> chantiers perdus/semaine = <strong>{Math.floor(yearlyLoss).toLocaleString('fr-FR')} €</strong> par an
+              <strong>{missedCallsPerWeek.toFixed(1)}</strong> appels manqués/semaine = <strong>{missedDealsPerWeek.toFixed(1)}</strong> chantiers perdus/semaine = <strong>{Math.round(yearlyLoss).toLocaleString('fr-FR')} €</strong> par an
             </div>
           </div>
 
@@ -74,7 +75,7 @@ export default function ROICalculator() {
               Avec HAKILY, vous retrouveriez
             </div>
             <div style={{ fontSize: '28px', fontWeight: '700', color: 'var(--vl)', fontFamily: "'Syne', sans-serif" }}>
-              {Math.floor(yearlyLoss * automationGain).toLocaleString('fr-FR')} €/an
+              {Math.round(yearlyLoss * automationGain).toLocaleString('fr-FR')} €/an
             </div>
           </div>
         </div>
