@@ -3,6 +3,9 @@
 import { useState, useEffect } from 'react'
 import Navigation from './components/Navigation'
 import Hero from './components/Hero'
+import Comparison from './components/Comparison'
+import Method from './components/Method'
+import Stats from './components/Stats'
 import Testimonials from './components/Testimonials'
 import ROICalculator from './components/ROICalculator'
 import FAQ from './components/FAQ'
@@ -24,6 +27,9 @@ export default function Home() {
     <main>
       <Navigation onCTAClick={handleCTAClick} />
       <Hero onCTAClick={handleCTAClick} />
+      <Comparison />
+      <Method />
+      <Stats />
       <Testimonials />
       <ROICalculator />
       <FAQ />

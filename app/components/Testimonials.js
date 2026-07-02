@@ -6,7 +6,7 @@ const testimonials = [
     name: 'Marc Leclerc',
     role: 'Plombier',
     location: 'Paris (75)',
-    text: 'Nexya m\'a fait gagner 5 heures par semaine en automatisant la prise de RDV. Résultat : 12 chantiers supplémentaires par mois.',
+    text: 'HAKILY m\'a fait gagner 5 heures par semaine en automatisant la prise de RDV. Résultat : 12 chantiers supplémentaires par mois.',
     result: '+12 chantiers/mois',
     avatar: 'ML',
     rating: 5
@@ -26,7 +26,7 @@ const testimonials = [
     name: 'Jean Dupont',
     role: 'Maçon',
     location: 'Saint-Denis (93)',
-    text: 'Plus besoin de gérer un agenda papier. Avec Nexya, mes appels sont traités 24/7, même quand j\'suis en chantier.',
+    text: 'Plus besoin de gérer un agenda papier. Avec HAKILY, mes appels sont traités 24/7, même quand j\'suis en chantier.',
     result: '+25h/semaine gagnées',
     avatar: 'JD',
     rating: 5
@@ -36,6 +36,7 @@ const testimonials = [
 export default function Testimonials() {
   return (
     <section id="testimonials" className="testimonials sec-dark">
+      <p className="eyebrow">Ils ont adopté la Méthode HAKILY</p>
       <h2 className="section-title">Ils ont fermé plus de chantiers</h2>
 
       <div className="testimonials-grid">

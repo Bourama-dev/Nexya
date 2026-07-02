@@ -23,7 +23,7 @@ export default function StickyCTA({ onCTAClick }) {
       <div className="sticky-content">
         <div className="countdown">
           <span className="countdown-dot"></span>
-          Places limitées en juin : {daysLeft} jours
+          Places limitées ce mois-ci : {daysLeft} jours
         </div>
         <div className="availability">
           Prochains RDV disponibles : demain, après-demain

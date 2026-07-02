@@ -1,8 +1,8 @@
 import './globals.css'
 
 export const metadata = {
-  title: 'Nexya — Zéro appel manqué',
-  description: 'Automatisation complète pour artisans BTP. Gagnez du temps, fermez plus de chantiers.',
+  title: 'HAKILY — Agents IA & Automatisation pour PME',
+  description: 'La Méthode HAKILY : agents IA et automatisations sur mesure pour TPE & PME. Zéro appel manqué, plus de clients, plus de chiffre d\'affaires.',
 }
 
 export default function RootLayout({ children }) {

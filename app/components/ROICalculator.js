@@ -3,7 +3,7 @@
 import { useState } from 'react'
 
 export default function ROICalculator() {
-  const [callsPerWeek, setCallsPerWeek] = useState(15)
+  const [callsPerWeek, setCallsPerWeek] = useState(25)
   const [avgProjectValue, setAvgProjectValue] = useState(8000)
 
   const conversionRate = 0.45
@@ -16,6 +16,7 @@ export default function ROICalculator() {
 
   return (
     <section id="roi" className="roi-section">
+      <p className="eyebrow">Calculateur de CA</p>
       <h2 className="section-title">Combien perdez-vous chaque mois ?</h2>
 
       <div className="roi-container">
@@ -63,14 +64,14 @@ export default function ROICalculator() {
             <div className="result-value">
               {monthlyLoss.toLocaleString('fr-FR')} €
             </div>
-            <div style={{ marginTop: '16px', padding: '12px', background: 'rgba(108,92,231,0.1)', borderRadius: '8px', fontSize: '12px', color: 'rgba(255,255,255,0.7)', lineHeight: '1.5' }}>
+            <div style={{ marginTop: '16px', padding: '12px', background: 'rgba(61,90,254,0.1)', borderRadius: '8px', fontSize: '12px', color: 'rgba(255,255,255,0.7)', lineHeight: '1.5' }}>
               <strong>{callsPerWeek * 0.15}</strong> appels manqués/semaine = <strong>{missedDeals}</strong> chantiers perdus/semaine = <strong>{Math.floor(yearlyLoss).toLocaleString('fr-FR')} €</strong> par an
             </div>
           </div>
 
-          <div style={{ marginTop: '32px', padding: '20px', background: 'rgba(162,155,254,0.1)', border: '1px solid var(--vl)', borderRadius: '12px', textAlign: 'center' }}>
+          <div style={{ marginTop: '32px', padding: '20px', background: 'rgba(45,212,191,0.1)', border: '1px solid var(--vl)', borderRadius: '12px', textAlign: 'center' }}>
             <div style={{ color: 'rgba(255,255,255,0.7)', fontSize: '13px', marginBottom: '8px' }}>
-              Avec Nexya, vous retrouveriez
+              Avec HAKILY, vous retrouveriez
             </div>
             <div style={{ fontSize: '28px', fontWeight: '700', color: 'var(--vl)', fontFamily: "'Syne', sans-serif" }}>
               {Math.floor(yearlyLoss * automationGain).toLocaleString('fr-FR')} €/an

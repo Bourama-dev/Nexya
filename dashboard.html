@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nexya — Portail Agents</title>
+<title>HAKILY — Portail Agents</title>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 /* ─── RESET & ROOT ─── */
 :root{
-  --v:#6C5CE7;--vl:#A29BFE;--vd:#1e1a4a;
+  --v:#3D5AFE;--vl:#2DD4BF;--vd:#1e1a4a;
   --dark:#07070F;--dark2:#0C0C1A;--dark3:#111120;
   --sidebar-w:256px;
   --card:rgba(255,255,255,0.04);
@@ -16,7 +16,7 @@
   --muted:rgba(255,255,255,0.38);
   --text:#fff;
   /* dept colors */
-  --dir:#6C5CE7;--dev:#0984E3;--com:#E84393;--mkt:#00B894;--cre:#E17055;
+  --dir:#3D5AFE;--dev:#0984E3;--com:#E84393;--mkt:#00B894;--cre:#E17055;
 }
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
@@ -46,7 +46,7 @@ body{
 }
 .sb-logo-name em{font-style:normal;color:var(--vl);}
 .sb-badge{
-  background:rgba(108,92,231,0.15);border:1px solid rgba(108,92,231,0.25);
+  background:rgba(61,90,254,0.15);border:1px solid rgba(61,90,254,0.25);
   color:var(--vl);font-size:10px;font-weight:700;
   padding:2px 8px;border-radius:20px;letter-spacing:0.05em;
 }
@@ -67,7 +67,7 @@ body{
 }
 .sb-nav a:hover{background:rgba(255,255,255,0.05);color:rgba(255,255,255,0.8);}
 .sb-nav a.active{
-  background:rgba(108,92,231,0.15);color:#fff;
+  background:rgba(61,90,254,0.15);color:#fff;
   box-shadow:inset 3px 0 0 var(--v);
 }
 .sb-icon{width:18px;height:18px;flex-shrink:0;opacity:0.75;}
@@ -130,7 +130,7 @@ body{
 .topbar-btn:hover{background:rgba(255,255,255,0.08);color:#fff;}
 .topbar-btn.primary{
   background:var(--v);color:#fff;border-color:transparent;
-  box-shadow:0 0 20px rgba(108,92,231,0.35);
+  box-shadow:0 0 20px rgba(61,90,254,0.35);
 }
 .topbar-btn.primary:hover{background:var(--vl);}
 .notif-btn{
@@ -166,7 +166,7 @@ body{
   top:0;left:0;right:0;height:2px;
   background:linear-gradient(90deg,var(--accent,var(--v)),transparent);
 }
-.stat-card:hover{border-color:rgba(108,92,231,0.25);transform:translateY(-2px);}
+.stat-card:hover{border-color:rgba(61,90,254,0.25);transform:translateY(-2px);}
 .stat-value{
   font-family:'Syne',sans-serif;font-weight:700;font-size:28px;
   line-height:1;margin-bottom:6px;
@@ -248,9 +248,9 @@ body{
   display:inline-flex;align-items:center;gap:5px;
   font-size:10px;font-weight:600;letter-spacing:0.04em;
   padding:2px 8px;border-radius:20px;margin-top:5px;
-  background:rgba(var(--dept-rgb,108,92,231),0.12);
+  background:rgba(var(--dept-rgb,61,90,254),0.12);
   color:var(--dept-color,var(--vl));
-  border:1px solid rgba(var(--dept-rgb,108,92,231),0.2);
+  border:1px solid rgba(var(--dept-rgb,61,90,254),0.2);
 }
 .status-pill{
   flex-shrink:0;font-size:10px;font-weight:600;
@@ -304,11 +304,11 @@ body{
 }
 .card-btn:hover{background:rgba(255,255,255,0.08);color:#fff;}
 .card-btn.primary{
-  background:rgba(var(--dept-rgb,108,92,231),0.15);
-  border-color:rgba(var(--dept-rgb,108,92,231),0.25);
+  background:rgba(var(--dept-rgb,61,90,254),0.15);
+  border-color:rgba(var(--dept-rgb,61,90,254),0.25);
   color:var(--dept-color,var(--vl));
 }
-.card-btn.primary:hover{background:rgba(var(--dept-rgb,108,92,231),0.25);}
+.card-btn.primary:hover{background:rgba(var(--dept-rgb,61,90,254),0.25);}
 .card-btn.danger{color:#FF7675;}
 .card-btn.danger:hover{background:rgba(255,118,117,0.1);border-color:rgba(255,118,117,0.25);}
 
@@ -424,7 +424,7 @@ body{
 .modal-form select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='rgba(255,255,255,0.35)' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:36px;cursor:pointer;}
 .modal-form select option{background:#1a1a2e;}
 .modal-form input:focus,.modal-form textarea:focus,.modal-form select:focus{
-  border-color:var(--v);box-shadow:0 0 0 3px rgba(108,92,231,0.15);
+  border-color:var(--v);box-shadow:0 0 0 3px rgba(61,90,254,0.15);
 }
 .modal-form .two-fields{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
 .modal-actions{
@@ -442,7 +442,7 @@ body{
 .modal-btn.cancel:hover{background:rgba(255,255,255,0.08);color:#fff;}
 .modal-btn.submit{
   background:var(--v);border:none;color:#fff;
-  box-shadow:0 0 20px rgba(108,92,231,0.35);
+  box-shadow:0 0 20px rgba(61,90,254,0.35);
 }
 .modal-btn.submit:hover{background:var(--vl);}
 .modal-btn.submit:active{transform:scale(0.98);}
@@ -511,7 +511,7 @@ body{
 <aside class="sidebar" id="sidebar">
   <div class="sb-top">
     <a href="index.html" class="sb-logo">
-      <span class="sb-logo-name">Nex<em>ya</em></span>
+      <span class="sb-logo-name">H<em>A</em>KILY</span>
       <span class="sb-badge">PORTAIL</span>
     </a>
 
@@ -577,7 +577,7 @@ body{
   <header class="topbar">
     <div class="topbar-left">
       <div class="topbar-title">Tableau de bord</div>
-      <div class="topbar-breadcrumb">Portail Nexya &rsaquo; Vue d'ensemble</div>
+      <div class="topbar-breadcrumb">Portail HAKILY &rsaquo; Vue d'ensemble</div>
     </div>
     <div class="topbar-right">
       <button class="topbar-btn" onclick="openTaskModal(null)">
@@ -596,7 +596,7 @@ body{
 
     <!-- STATS -->
     <div class="stats-row">
-      <div class="stat-card" style="--accent:#A29BFE;">
+      <div class="stat-card" style="--accent:#2DD4BF;">
         <div class="stat-icon">🤖</div>
         <div class="stat-value" id="stat-agents">8</div>
         <div class="stat-label">Agents déployés</div>
@@ -640,14 +640,14 @@ body{
           <div class="section-title">
             <span style="color:var(--dir)">★</span>
             Direction
-            <span class="dept-badge" style="color:var(--dir);border-color:rgba(108,92,231,0.35);">CEO</span>
+            <span class="dept-badge" style="color:var(--dir);border-color:rgba(61,90,254,0.35);">CEO</span>
           </div>
           <span class="section-count">1 agent</span>
         </div>
         <div class="agents-grid featured">
-          <div class="agent-card" style="--dept-color:var(--dir);--dept-rgb:108,92,231;">
+          <div class="agent-card" style="--dept-color:var(--dir);--dept-rgb:61,90,254;">
             <div class="agent-card-top">
-              <div class="agent-avatar ceo" style="background:linear-gradient(135deg,#6C5CE7,#A29BFE);">
+              <div class="agent-avatar ceo" style="background:linear-gradient(135deg,#3D5AFE,#2DD4BF);">
                 ID
                 <div class="status-ring actif"></div>
               </div>
@@ -740,16 +740,16 @@ body{
           </div>
 
           <!-- Prisca -->
-          <div class="agent-card" style="--dept-color:#6C5CE7;--dept-rgb:108,92,231;">
+          <div class="agent-card" style="--dept-color:#3D5AFE;--dept-rgb:61,90,254;">
             <div class="agent-card-top">
-              <div class="agent-avatar" style="background:linear-gradient(135deg,#6C5CE7,#a29bfe);">
+              <div class="agent-avatar" style="background:linear-gradient(135deg,#3D5AFE,#2dd4bf);">
                 PR
                 <div class="status-ring cours"></div>
               </div>
               <div class="agent-info">
                 <div class="agent-name">Prisca</div>
                 <div class="agent-role">Agent Spécialiste n8n</div>
-                <div class="agent-dept" style="color:#A29BFE;background:rgba(108,92,231,0.12);border-color:rgba(108,92,231,0.22);">
+                <div class="agent-dept" style="color:#2DD4BF;background:rgba(61,90,254,0.12);border-color:rgba(61,90,254,0.22);">
                   <span style="width:6px;height:6px;border-radius:50%;background:currentColor;"></span>
                   Automatisation
                 </div>
@@ -768,12 +768,12 @@ body{
             <div class="task-progress">
               <div class="task-progress-header">
                 <span class="task-progress-label">Progression</span>
-                <span class="task-progress-pct" style="color:#A29BFE;">54%</span>
+                <span class="task-progress-pct" style="color:#2DD4BF;">54%</span>
               </div>
-              <div class="progress-bar"><div class="progress-fill" style="width:54%;background:#A29BFE;"></div></div>
+              <div class="progress-bar"><div class="progress-fill" style="width:54%;background:#2DD4BF;"></div></div>
             </div>
             <div class="card-actions">
-              <button class="card-btn primary" style="--dept-color:#A29BFE;--dept-rgb:162,155,254;" onclick="openTaskModal('Prisca','Spécialiste n8n','vl')">
+              <button class="card-btn primary" style="--dept-color:#2DD4BF;--dept-rgb:45,212,191;" onclick="openTaskModal('Prisca','Spécialiste n8n','vl')">
                 <svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
                 Assigner
               </button>
@@ -1035,7 +1035,7 @@ body{
         </div>
         <div class="activity-list">
           <div class="activity-item">
-            <div class="act-avatar" style="background:linear-gradient(135deg,#6C5CE7,#A29BFE);">ID</div>
+            <div class="act-avatar" style="background:linear-gradient(135deg,#3D5AFE,#2DD4BF);">ID</div>
             <div class="act-text">
               <div class="act-name">Idriss</div>
               <div class="act-desc">A terminé l'analyse du rapport Q1 et transmis les conclusions à l'équipe</div>
@@ -1091,9 +1091,9 @@ body{
           <div>
             <div class="mini-stat">
               <span class="mini-stat-label">Agents actifs</span>
-              <span class="mini-stat-value" style="color:#A29BFE;">6 / 8</span>
+              <span class="mini-stat-value" style="color:#2DD4BF;">6 / 8</span>
             </div>
-            <div class="mini-bar"><div class="mini-bar-fill" style="width:75%;background:#A29BFE;"></div></div>
+            <div class="mini-bar"><div class="mini-bar-fill" style="width:75%;background:#2DD4BF;"></div></div>
           </div>
           <div>
             <div class="mini-stat">
@@ -1202,8 +1202,8 @@ body{
 <script>
 /* ── DEPT COLORS ── */
 const deptColors = {
-  dir: '#6C5CE7', dev: '#0984E3', com: '#E84393',
-  mkt: '#00B894', cre: '#E17055', vl: '#A29BFE'
+  dir: '#3D5AFE', dev: '#0984E3', com: '#E84393',
+  mkt: '#00B894', cre: '#E17055', vl: '#2DD4BF'
 };
 
 /* ── TOAST ── */

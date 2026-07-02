@@ -9,7 +9,7 @@ export default function Hero({ onCTAClick }) {
       <div className="hero-content">
         <div className="hero-badge">
           <span className="bdot"></span>
-          Plus de 400+ artisans BTP en France
+          La Méthode HAKILY™ — Agents IA & automatisation pour PME
         </div>
 
         <h1>
@@ -17,16 +17,16 @@ export default function Hero({ onCTAClick }) {
         </h1>
 
         <p>
-          Automatisez votre prise de RDV, relancez automatiquement les prospects, et
-          fermez 40% plus de chantiers. Essayez gratuitement.
+          Des agents IA et des automatisations sur mesure qui répondent, qualifient et relancent
+          vos prospects 24/7. La Méthode HAKILY™ organise, automatise et fait grandir votre entreprise.
         </p>
 
         <div className="hero-btns">
           <button className="btn btn-primary" onClick={onCTAClick}>
             RDV diagnostic gratuit
           </button>
-          <a href="https://calendly.com" className="btn btn-secondary">
-            Voir la démo
+          <a href="#method" className="btn btn-secondary">
+            Découvrir la Méthode
           </a>
         </div>
       </div>

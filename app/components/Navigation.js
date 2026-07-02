@@ -21,10 +21,11 @@ export default function Navigation({ onCTAClick }) {
   return (
     <nav className={isLightNav ? 'light-nav' : ''}>
       <a href="#" className="logo">
-        <span className="logo-name">Ne<em>xy</em>a</span>
+        <span className="logo-name">H<em>A</em>KILY</span>
       </a>
 
       <div className="nav-links">
+        <a href="#method">Méthode</a>
         <a href="#testimonials">Témoignages</a>
         <a href="#roi">ROI</a>
         <a href="#faq">FAQ</a>
